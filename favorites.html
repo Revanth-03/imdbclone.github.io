@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+
+    <title>FavoriteMovies</title>
+  </head>
+  <body>
+    <div>
+      <a href="index.html" style="color: navy"
+        ><h3 class="ms-5 mt-5">Back</h3></a
+      >
+    </div>
+    <div class="container d-flex flex-column"></div>
+
+    <!-- JavaScript -->
+
+    <script>
+      const container = document.querySelector(".container");
+
+      const favoriteMovies =
+        JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+
+      // Removing Favorite Movies
+
+      function removeFavoriteList(movie) {
+        const index = favoriteMovies.indexOf(movie);
+        favoriteMovies.splice(index, 1);
+        localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
+      }
+
+      // Display Favorite Movies
+      function displayFavoriteMovies() {
+        container.innerHTML = ""; // This will clear the all the html elements in the container
+
+        favoriteMovies.forEach((movie) => {
+          const movieElement = document.createElement("div"); //creating new html element
+          movieElement.classList.add(
+            "container",
+            "d-flex",
+            "justify-content-between",
+            "align-items-center",
+            "mt-5",
+            "p-4"
+          );
+          movieElement.style.border = "1px solid aliceblue ";
+          movieElement.style.borderRadius = "30px";
+
+          movieElement.innerHTML = `${
+            //Elements inside the movieElement div
+
+            movie.Poster !== "N/A"
+              ? `<img src="${movie.Poster}" alt=${movie.Title} height="101px" width="100px " class="ms-5 me-5" style="border:5px solid antiquewhite;border-radius:10px">`
+              : `<img src = https://t3.ftcdn.net/jpg/01/75/90/56/240_F_175905605_9i2vz4twiBTKHJho3cJxXcn60Cu0qurq.jpg alt = "coming soon" height="85px" width="60px" class="ms-5 me-5"style="border:5px solid antiquewhite;border-radius:10px;">`
+          }
+          <h2 style="color:white; " >${movie.Title}</h2>
+          <button class="btn btn-outline-dark ms-5 me-5 " id="remove-favorite"  style="width:201px;height:50px;">Remove Favorites </button>`;
+
+          //EventListener for Remove Favorite Button
+          const removeFavorite = movieElement.querySelector("#remove-favorite");
+          removeFavorite.addEventListener("click", () => {
+            removeFavoriteList(movie);
+            displayFavoriteMovies(); //Again call the displayFavoriteMovies function to show favorites
+          });
+
+          //add the movieElement div as a children of conatiner div
+          container.appendChild(movieElement);
+        });
+      }
+      displayFavoriteMovies();
+    </script>
+  </body>
+</html>

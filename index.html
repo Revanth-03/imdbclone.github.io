@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: rgb(0, 0, 0, 0.7);
+      }
+      h1 span {
+        font-size: 4rem;
+        color: black;
+        background: #f5c518;
+        border-radius: 5px;
+      }
+
+      i {
+        color: #4c4c4c;
+      }
+      .btn-outline-info i {
+        color: #e3f2fd;
+      }
+      .list-group {
+        border-radius: 0 0 5px 5px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-decoration: none;
+        background-color: rgb(245, 245, 245);
+        position: absolute;
+        width: 560px;
+        left: 279px;
+        top: 219px;
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+      }
+      .list-iteam-group {
+        padding: 9px 14px;
+        align-items: center;
+        z-index: 100;
+      }
+      .list-iteam-group:hover {
+        background-color: #eceffa;
+        cursor: pointer;
+      }
+    </style>
+    <title>Mini IMDB Clone</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 style="text-align: center">MINI <span>IMDB</span> CLONE</h1>
+      <nav
+        class="navbar navbar-light justify-content-center mt-5"
+        style="background-color: #e3f2fd"
+      >
+        <form class="d-flex">
+          <input
+            class="form-control me-1"
+            id="serach-input"
+            type="search"
+            placeholder="Enter the movie-title"
+            size="50"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-outline-primary me-5"
+            id="serach-movie"
+            type="submit"
+          >
+            Search
+          </button>
+
+          <a
+            href="/MainPage/favorites.html"
+            target="_self"
+            rel="noopener noreferrer"
+            class="btn btn-outline-info"
+            style="width: 162px"
+          >
+            Favorites &nbsp <i class="fa-solid fa-heart"> </i>
+          </a>
+        </form>
+      </nav>
+      <ul id="suggestions" class="list-group z-index=1"></ul>
+
+      <div class="container res mt-5">
+        <h2 style="display: none">Searching Results</h2>
+        <div class="row mt-5 d-flex" id="serach-results">
+          <!-- Search Results will be display here  -->
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ebd9aedbad.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
