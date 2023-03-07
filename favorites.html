@@ -46,7 +46,14 @@
       // Display Favorite Movies
       function displayFavoriteMovies() {
         container.innerHTML = ""; // This will clear the all the html elements in the container
-
+         
+        if (localStorage.favoriteMovies.length == 2) {
+          const addFavorites = document.createElement("h2");
+          addFavorites.style.color = "white";
+          addFavorites.textContent = "ADD SOME FAVORATES";
+          container.appendChild(addFavorites);
+        }
+        
         favoriteMovies.forEach((movie) => {
           const movieElement = document.createElement("div"); //creating new html element
           movieElement.classList.add(
