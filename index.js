@@ -91,6 +91,7 @@ searchMovie.addEventListener("click", (e) => {
             displayMovie(movie);
           })
           .catch((error) => {
+            serchResult.innerHTML = "";
             const fourOFour = document.createElement("h2");
             fourOFour.className = "ms-5";
             fourOFour.innerText = "Search movie not found";
