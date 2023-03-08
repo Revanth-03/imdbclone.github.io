@@ -50,6 +50,40 @@
         background-color: #eceffa;
         cursor: pointer;
       }
+       /* Breakpoint for small screens */
+      @media (max-width: 575.98px) {
+        .list-group {
+          width: 70%;
+          left: 12px;
+          top: 243px;
+        }
+      }
+
+      /* Breakpoint for tablets  */
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .list-group {
+          width: 63%;
+          left: 36px;
+          top: 243px;
+        }
+      }
+
+      /* Breakpoint for laptops*/
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .list-group {
+          width: 55%;
+          left: 108px;
+          top: 219px;
+        }
+      }
+
+      /* Breakpoint for extra extra large screens */
+      @media (min-width: 1400px) {
+        .list-group {
+          width: 560px;
+          left: 318px;
+          top: 219px;
+        }
     </style>
     <title>Mini IMDB Clone</title>
   </head>
