@@ -54,7 +54,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 This app uses the [OMDb API](http://www.omdbapi.com/) to retrieve movie data.
 
-[localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is used in the project.
+[LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is used in the project.
 
 The [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) framework for providing the responsive UI components used in the application
 
