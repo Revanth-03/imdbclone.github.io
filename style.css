@@ -1,0 +1,74 @@
+body {
+  background: rgb(0, 0, 0, 0.7);
+}
+h1 span {
+  font-size: 4rem;
+  color: black;
+  background: #f5c518;
+  border-radius: 5px;
+}
+
+i {
+  color: #4c4c4c;
+}
+.btn-outline-info i {
+  color: #e3f2fd;
+}
+.list-group {
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-decoration: none;
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+  width: 560px;
+  left: 279px;
+  top: 219px;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+.list-iteam-group {
+  padding: 9px 14px;
+  align-items: center;
+  z-index: 100;
+}
+.list-iteam-group:hover {
+  background-color: #eceffa;
+  cursor: pointer;
+}
+/* Breakpoint for small screens */
+@media (max-width: 575.98px) {
+  .list-group {
+    width: 70%;
+    left: 12px;
+    top: 243px;
+  }
+}
+
+/* Breakpoint for tablets  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .list-group {
+    width: 63%;
+    left: 36px;
+    top: 243px;
+  }
+}
+
+/* Breakpoint for laptops*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .list-group {
+    width: 55%;
+    left: 108px;
+    top: 219px;
+  }
+}
+
+/* Breakpoint for extra extra large screens */
+@media (min-width: 1400px) {
+  .list-group {
+    width: 560px;
+    left: 318px;
+    top: 219px;
+  }
+}
