@@ -23,7 +23,7 @@ serachInput.addEventListener("input", () => {
   fetch(`${apiURL1}=${searchTerm}`) //it return the promise
     .then((response) => response.json())
     .then((data) => {
-      const suggestions = data.Search || [];
+      const suggestions = data.Search;
       displaySuggestions(suggestions);
     });
 });
@@ -44,7 +44,7 @@ function displaySuggestions(suggestions) {
     serachSuggestions.appendChild(listElement);
   });
 
-  // let limit = Math.min(suggestions.length, 15);  //to limit the suggestions to 15
+  // let limit = Math.min(suggestions.length, 15);  ***//to limit the suggestions to 15***
 
   // for (let i = 0; i < limit; i++) {
   //   const suggestion = suggestions[i];
