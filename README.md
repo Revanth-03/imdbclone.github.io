@@ -1,5 +1,5 @@
 # MINI IMDB CLONE APP
-IMDB Clone is a simple multi page web application that allows users to search for movies and view details about them. It was built using HTML, CSS, and JavaScript.
+IMDB Clone is a simple multi page web application that allows users to search for movies and view details about them. It was built using **HTML**, **CSS**, and **JavaScript**.
 
 The app is hosted on GitHub Pages and can be accessed at [https://revanth-03.github.io/imdbclone.github.io/index.html](https://revanth-03.github.io/imdbclone.github.io/index.html).
 
