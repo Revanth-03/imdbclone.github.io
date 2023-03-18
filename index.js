@@ -95,7 +95,6 @@ searchMovie.addEventListener("click", (e) => {
             document.querySelector(".res").childNodes[1].style.display = "none";
           
             const fourOFour = document.createElement("h2");
-            fourOFour.className = "ms-5";
             fourOFour.innerText = "Search movie not found";
             serchResult.appendChild(fourOFour);
           });
