@@ -92,7 +92,7 @@ searchMovie.addEventListener("click", (e) => {
           })
           .catch((error) => {
             serchResult.innerHTML = "";
-            document.querySelector(".res").childNodes[1].style.display = "block";
+            document.querySelector(".res").childNodes[1].style.display = "none";
           
             const fourOFour = document.createElement("h2");
             fourOFour.className = "ms-5";
