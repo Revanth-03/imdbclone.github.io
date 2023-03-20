@@ -186,7 +186,9 @@ function displayMovie(movie) {
 
 //Adding the favorites to localstorage by clicking the favoratie button
 function addFavoriteList(movie) {
+  if(!favoriteMovies.includes(movie)){
   favoriteMovies.push(movie);
   localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
-  console.log("localstorage", localStorage.getItem("favoriteMovies"));
-}
+  //console.log("localstorage", localStorage.getItem("favoriteMovies"));
+    }
+  }
